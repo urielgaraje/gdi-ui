@@ -1,0 +1,23 @@
+:root {
+  --text-color: black;
+  --bg-color: #8a55c8;
+  --bg-body: white;
+}
+
+.dark-mode {
+  --text-color: white;
+  --bg-color: #115e57;
+  --bg-body: #020618;
+}
+
+.light-mode {
+  --text-color: black;
+  --bg-color: #8a55c8;
+  --bg-body: white;
+}
+
+/* Uso de variables */
+body {
+  color: var(--text-color);
+  background-color: var(--bg-body);
+}

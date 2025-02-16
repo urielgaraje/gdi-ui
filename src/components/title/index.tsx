@@ -1,6 +1,5 @@
 import styles from './title.module.css';
 import clsx from 'clsx';
-
 export interface TitleProps extends React.ComponentProps<'h1'> {
   primary?: boolean;
   title: string;
