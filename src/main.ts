@@ -1,2 +1,2 @@
-export { Button } from './components/button/';
-export { Title } from './components/title/';
+export { Button } from './components/button';
+export { Title } from './components/title';

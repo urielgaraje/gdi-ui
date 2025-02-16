@@ -14,7 +14,7 @@ export default tseslint.config(
       ecmaVersion: 2020,
       globals: globals.browser,
     },
-    ignorePatterns: ['dist', '.eslintrc.cjs', 'postcss.config.js'],
+    ignores: ['dist'],
     plugins: {
       'react-hooks': reactHooks,
       'react-refresh': reactRefresh,

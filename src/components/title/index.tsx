@@ -1,12 +1,12 @@
 import styles from './title.module.css';
 import clsx from 'clsx';
 
-interface ComponentProps extends React.ComponentProps<'h1'> {
+export interface TitleProps extends React.ComponentProps<'h1'> {
   primary?: boolean;
   title: string;
 }
 
-export function Title({ primary = false, title, ...props }: ComponentProps) {
+export function Title({ primary = false, title, ...props }: TitleProps) {
   const style = clsx(styles.title, {
     [styles['title--primary']]: primary,
   });

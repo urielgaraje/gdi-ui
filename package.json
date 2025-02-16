@@ -3,6 +3,31 @@
   "private": true,
   "version": "1.0.0",
   "type": "module",
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/main.cjs.js",
+  "module": "./dist/main.es.js",
+  "exports": {
+    ".": {
+      "types": "./dist/main.d.ts",
+      "import": "./dist/main.es.js",
+      "require": "./dist/main.cjs.js"
+    },
+    "./components/*": {
+      "types": "./dist/components/*/index.d.ts",
+      "import": "./dist/components/*/index.es.js",
+      "require": "./dist/components/*/index.cjs.js"
+    }
+  },
+  "sideEffects": false,
+  "typesVersions": {
+    "*": {
+      "components/*": [
+        "dist/components/*/index.d.ts"
+      ]
+    }
+  },
   "scripts": {
     "build": "tsc -b && vite build",
     "lint": "eslint .",

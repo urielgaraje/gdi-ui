@@ -6,19 +6,28 @@ import dts from 'vite-plugin-dts';
 import { fileURLToPath } from 'node:url';
 import { globSync } from 'glob';
 import { libInjectCss } from 'vite-plugin-lib-inject-css';
+//import vitePluginCssInjectedByJs from 'vite-plugin-css-injected-by-js';
 
 // https://vite.dev/config/
 export default defineConfig({
-  plugins: [react(), libInjectCss(), dts({ exclude: ['**/*.stories.tsx'] })],
+  plugins: [
+    react(),
+    libInjectCss(),
+    dts({
+      exclude: ['**/*.stories.tsx'],
+      tsconfigPath: './tsconfig.app.json',
+      rollupTypes: false,
+    }),
+  ],
   build: {
     lib: {
       entry: resolve(__dirname, 'src/main.ts'),
-      formats: ['es'],
+      formats: ['es', 'cjs'],
     },
     rollupOptions: {
       external: ['react', 'react-dom', 'react/jsx-runtime'],
       input: Object.fromEntries(
-        globSync(['src/components/**/index.tsx', 'src/main.ts']).map((file) => {
+        globSync(['src/components/**/index.tsx', 'src/main.{ts,tsx}']).map((file) => {
           // This remove `src/` as well as the file extension from each
           // file, so e.g. src/nested/foo.js becomes nested/foo
           const entryName = path.relative('src', file.slice(0, file.length - path.extname(file).length));
@@ -29,7 +38,7 @@ export default defineConfig({
         })
       ),
       output: {
-        entryFileNames: '[name].js',
+        entryFileNames: '[name].[format].js',
         assetFileNames: 'assets/[name][extname]',
         globals: {
           react: 'React',
