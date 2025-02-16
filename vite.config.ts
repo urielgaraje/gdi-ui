@@ -9,7 +9,7 @@ import { libInjectCss } from 'vite-plugin-lib-inject-css';
 
 // https://vite.dev/config/
 export default defineConfig({
-  plugins: [react(), libInjectCss(), dts()],
+  plugins: [react(), libInjectCss(), dts({ exclude: ['**/*.stories.tsx'] })],
   build: {
     lib: {
       entry: resolve(__dirname, 'src/main.ts'),

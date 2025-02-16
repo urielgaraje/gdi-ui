@@ -3,6 +3,8 @@
 
   background-color: var(--bg-color);
   border-radius: 6px;
+
+  backdrop-filter: sepia(90%);
 }
 
 .button--primary {
