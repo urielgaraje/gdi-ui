@@ -16,7 +16,6 @@
   --bg-body: white;
 }
 
-/* Uso de variables */
 body {
   color: var(--text-color);
   background-color: var(--bg-body);
