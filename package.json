@@ -1,6 +1,5 @@
 {
   "name": "@gdi/ui",
-  "private": true,
   "version": "1.0.0",
   "type": "module",
   "files": [
@@ -27,6 +26,9 @@
         "dist/components/*/index.d.ts"
       ]
     }
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
   },
   "scripts": {
     "build": "tsc -b && vite build",
