@@ -1,5 +1,5 @@
 {
-  "name": "@gdi/ui",
+  "name": "@urielgaraje/gdi-ui",
   "version": "1.0.0",
   "type": "module",
   "files": [
@@ -32,7 +32,7 @@
     "url": "git+https://github.com/urielgaraje/gdi-ui.git"
   },
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
+    "registry": "https://npm.pkg.github.com/@urielgaraje"
   },
   "scripts": {
     "build": "tsc -b && vite build",
