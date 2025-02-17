@@ -1,6 +1,6 @@
 {
   "name": "@urielgaraje/gdi-ui",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "type": "module",
   "files": [
     "dist"
@@ -43,7 +43,8 @@
     "stylelint": "stylelint **/*.css",
     "stylelint:fix": "stylelint **/*.css --fix",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "release": "standard-version"
   },
   "peerDependencies": {
     "react": "^19.0.0",
