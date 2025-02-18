@@ -99,6 +99,9 @@ jobs:
       - name: Configure Git User
         uses: fregante/setup-git-user@v2
 
+      - name: Pull latest changes before versioning
+        run: git pull --rebase
+
       - name: Run versioning
         run: npm run release
 
