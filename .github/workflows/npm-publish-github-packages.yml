@@ -1,9 +1,6 @@
 name: Publish Library to GitHub packages
 
 on:
-  push:
-    branches:
-      - main
   release:
     types: [created]
 
