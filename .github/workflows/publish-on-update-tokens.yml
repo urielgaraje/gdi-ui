@@ -1,11 +1,15 @@
-name: Publish when Updating Tokens
+name: Publish Library and Storybook
 
 on:
   push:
     branches:
       - main
-  release:
-    types: [created]
+
+permissions:
+  contents: read
+  packages: write
+  pages: write
+  id-token: write
 
 jobs:
   setup:
@@ -93,7 +97,7 @@ jobs:
         run: git push --follow-tags
 
   publish-gpr:
-    needs: [versioning, build]  # Asegura que siempre se construya antes de publicar
+    needs: [versioning]
     runs-on: ubuntu-latest
     permissions:
       contents: read
@@ -122,3 +126,25 @@ jobs:
         run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  deploy-storybook:
+    needs: [versioning]  # Se ejecuta después del versionado en paralelo con `publish-gpr`
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Deploy Storybook to GitHub Pages
+        uses: bitovi/github-actions-storybook-to-github-pages@v1.0.3
+        with:
+          install_command: npm install
+          build_command: npm run build:storybook
+          path: storybook-static
+          checkout: false
