@@ -1,4 +1,4 @@
-name: Publish Library on Update Tokens
+name: Publish when Updating Tokens
 
 on:
   push:
@@ -93,7 +93,7 @@ jobs:
         run: git push --follow-tags
 
   publish-gpr:
-    needs: versioning
+    needs: [versioning, build]  # Asegura que siempre se construya antes de publicar
     runs-on: ubuntu-latest
     permissions:
       contents: read
@@ -108,7 +108,14 @@ jobs:
           path: node_modules
           key: ${{ runner.os }}-node-${{ hashFiles('package-lock.json') }}
 
-      - name: Build project
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          registry-url: https://npm.pkg.github.com/
+          scope: ${{ github.repository_owner }}
+
+      - name: Build project before publishing
         run: npm run build
 
       - name: Publish package

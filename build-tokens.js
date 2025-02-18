@@ -41,5 +41,12 @@ const sd = new StyleDictionary({
   },
 });
 
-await sd.cleanAllPlatforms();
-await sd.buildAllPlatforms();
+// Build the dictionary
+try {
+  await sd.cleanAllPlatforms();
+  await sd.buildAllPlatforms();
+} catch (error) {
+  console.error('Error building style dictionary:', error);
+}
+
+export default sd;
