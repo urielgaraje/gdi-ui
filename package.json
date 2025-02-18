@@ -17,6 +17,9 @@
       "types": "./dist/components/*/index.d.ts",
       "import": "./dist/components/*/index.es.js",
       "require": "./dist/components/*/index.cjs.js"
+    },
+    "./themes/*": {
+      "css": "./dist/assets/themes/*.css"
     }
   },
   "sideEffects": false,
