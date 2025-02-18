@@ -25,11 +25,3 @@ type Story = StoryObj<typeof Card>;
 export const Default: Story = {
   args: {},
 };
-
-export const Dark: Story = {
-  parameters: {
-    themes: {
-      themeOverride: 'dark',
-    },
-  },
-};
