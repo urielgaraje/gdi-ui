@@ -19,7 +19,8 @@
       "require": "./dist/components/*/index.cjs.js"
     },
     "./themes/*": {
-      "css": "./dist/assets/themes/*.css"
+      "import": "./dist/assets/themes/*.css",
+      "require": "./dist/assets/themes/*.css"
     }
   },
   "sideEffects": false,
