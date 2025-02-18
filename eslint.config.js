@@ -14,7 +14,7 @@ export default tseslint.config(
       ecmaVersion: 2020,
       globals: globals.browser,
     },
-    ignores: ['dist'],
+    ignores: ['dist', 'src/themes/*.json'],
     plugins: {
       'react-hooks': reactHooks,
       'react-refresh': reactRefresh,

@@ -1,12 +1,6 @@
 import { register } from '@tokens-studio/sd-transforms';
 import StyleDictionary from 'style-dictionary';
-import {
-  transformGroups,
-  logBrokenReferenceLevels,
-  logWarningLevels,
-  logVerbosityLevels,
-  formats,
-} from 'style-dictionary/enums';
+import { logBrokenReferenceLevels, logWarningLevels, logVerbosityLevels, formats } from 'style-dictionary/enums';
 
 // will register them on StyleDictionary object
 // that is installed as a dependency of this package.
@@ -41,5 +35,5 @@ const sd = new StyleDictionary({
   },
 });
 
-/* await sd.cleanAllPlatforms();
-await sd.buildAllPlatforms(); */
+await sd.cleanAllPlatforms();
+await sd.buildAllPlatforms();
