@@ -1,25 +1,23 @@
-import styles from './button.module.css';
 import clsx from 'clsx';
+import styles from './button.module.css';
+import { ComponentProps } from 'react';
 
-export interface ButtonProps extends React.ComponentProps<'button'> {
-  primary?: boolean;
+export type ButtonProps = ComponentProps<'button'> & {
+  variant?: 'primary' | 'secondary' | 'destructive';
   size?: 'small' | 'medium' | 'large';
-  label: string;
-}
+};
 
-export function Button({ primary = false, size = 'medium', label, ...props }: ButtonProps) {
-  const style = clsx(styles.button, {
-    [styles['button--primary']]: primary,
-    [styles[`button--${size}`]]: size,
-  });
+const variantClasses = {
+  primary: styles.button,
+  secondary: `${styles.button} ${styles.secondary}`,
+  destructive: `${styles.button} ${styles.destructive}`,
+};
 
+export const Button = ({ variant = 'primary', size = 'medium', className, ...props }: ButtonProps) => {
   return (
     <button
-      type='button'
-      className={style}
+      className={clsx(variantClasses[variant], styles[size], className)}
       {...props}
-    >
-      {label}
-    </button>
+    />
   );
-}
+};

@@ -1,6 +1,12 @@
 import { register } from '@tokens-studio/sd-transforms';
 import StyleDictionary from 'style-dictionary';
-import { logBrokenReferenceLevels, logWarningLevels, logVerbosityLevels, formats } from 'style-dictionary/enums';
+import {
+  logBrokenReferenceLevels,
+  logWarningLevels,
+  logVerbosityLevels,
+  formats,
+  transforms,
+} from 'style-dictionary/enums';
 
 // will register them on StyleDictionary object
 // that is installed as a dependency of this package.
@@ -16,7 +22,7 @@ const sd = new StyleDictionary({
   platforms: {
     css: {
       transformGroups: 'token-studio',
-      transforms: ['name/kebab'], // <-- add a token name transform for generating token names, default is camel
+      transforms: [transforms.nameKebab, transforms.sizePx], // <-- add a token name transform for generating token names, default is camel
       buildPath: 'src/themes/',
       files: [
         {

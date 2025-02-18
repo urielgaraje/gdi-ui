@@ -1,37 +1,53 @@
-import type { Meta, StoryObj } from '@storybook/react';
 import { fn } from '@storybook/test';
-
-import { Button } from './index';
+import type { Meta, StoryObj } from '@storybook/react';
+import { Button } from '.';
 
 const meta = {
-  title: 'Components/MyButton',
+  title: 'Components/Button',
   component: Button,
-  parameters: {
-    layout: 'centered',
+  args: {
+    children: 'Button',
+    disabled: false,
+    variant: 'primary',
+    size: 'medium',
+    onClick: fn(),
   },
   tags: ['autodocs'],
-  args: {
-    label: 'Button',
-    onClick: fn(),
+  argTypes: {
+    disabled: {
+      control: 'boolean',
+      description: 'Disables the button',
+    },
+    variant: {
+      control: 'select',
+    },
   },
 } satisfies Meta<typeof Button>;
 
 export default meta;
-type Story = StoryObj<typeof meta>;
-
-export const Default: Story = {
-  args: {},
-};
+type Story = StoryObj<typeof Button>;
 
 export const Primary: Story = {
   args: {
-    primary: true,
+    variant: 'primary',
   },
 };
 
 export const Secondary: Story = {
   args: {
-    primary: false,
+    variant: 'secondary',
+  },
+};
+
+export const Destructive: Story = {
+  args: {
+    variant: 'destructive',
+  },
+};
+
+export const Small: Story = {
+  args: {
+    size: 'small',
   },
 };
 
@@ -41,8 +57,18 @@ export const Large: Story = {
   },
 };
 
-export const Small: Story = {
-  args: {
-    size: 'small',
+export const Dark: Story = {
+  parameters: {
+    themes: {
+      themeOverride: 'dark',
+    },
+  },
+};
+
+export const Mobile: Story = {
+  parameters: {
+    viewport: {
+      defaultViewport: 'mobile1',
+    },
   },
 };
