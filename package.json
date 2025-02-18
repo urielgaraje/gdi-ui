@@ -18,10 +18,7 @@
       "import": "./dist/components/*/index.es.js",
       "require": "./dist/components/*/index.cjs.js"
     },
-    "./themes/*": {
-      "import": "./dist/assets/themes/*.css",
-      "require": "./dist/assets/themes/*.css"
-    }
+    "./themes/default-theme.css": "./dist/assets/themes/default-theme.css"
   },
   "sideEffects": false,
   "typesVersions": {

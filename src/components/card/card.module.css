@@ -7,6 +7,8 @@
   max-width: 280px;
   background-color: var(--color-gray-50);
   gap: var(--space-xl);
+  color: var(--color-base-black);
+  font-size: 16px;
 }
 
 .content {
@@ -17,6 +19,9 @@
 
 .details {
   font-size: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 .title {
@@ -39,6 +44,10 @@
 
 .description {
   color: var(--color-gray-500);
+}
+
+.location {
+  font-size: 14px;
 }
 
 .location {
