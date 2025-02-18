@@ -34,6 +34,7 @@ jobs:
           else
             echo "is_style_commit=false" >> $GITHUB_ENV
             echo "is_style_commit=false" >> $GITHUB_OUTPUT
+          fi
         shell: bash
 
   build:
