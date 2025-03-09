@@ -14,7 +14,7 @@
   --color-blue-800: #3032a3;
   --color-blue-900: #2e3081;
   --color-blue-950: #1b1c4b;
-  --color-gray-50: #636363;
+  --color-gray-50: #f7f8f8;
   --color-gray-100: #edeef1;
   --color-gray-200: #d8dbdf;
   --color-gray-300: #b6bac3;
@@ -47,6 +47,6 @@
   --surface-primary: #1E1F20;
   --button-background-primary: #a5a7fc;
   --button-label-primary: #ffffff;
-  --text-primary: #636363;
+  --text-primary: #f7f8f8;
   --text-secondary: #6b7280;
 }
