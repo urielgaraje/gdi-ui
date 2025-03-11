@@ -1,4 +1,4 @@
-@import './themes/default-theme.css';
+@import '@urielgaraje/gdi-ui-tokens/tokens.css';
 @import '@fontsource-variable/inter';
 
 body {

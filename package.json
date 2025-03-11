@@ -20,7 +20,9 @@
     },
     "./themes/default-theme.css": "./dist/assets/themes/default-theme.css"
   },
-  "sideEffects": false,
+  "sideEffects": [
+    "**/*.css"
+  ],
   "typesVersions": {
     "*": {
       "components/*": [
