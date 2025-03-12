@@ -49,7 +49,7 @@
     "release": "standard-version"
   },
   "peerDependencies": {
-    "@urielgaraje/gdi-ui-tokens": "^0.0.2",
+    "@urielgaraje/gdi-ui-tokens": "^0.0.3",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
   },
