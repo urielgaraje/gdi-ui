@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## 1.2.0 (2025-03-12)
+
+
+### Features
+
+* change manual process ([c6a1ea5](https://github.com/urielgaraje/gdi-ui/commit/c6a1ea517989aac07cdea40316fefafa2c3f7bd7))
+
 ### 1.1.18 (2025-03-12)
 
 ### 1.1.17 (2025-03-12)
