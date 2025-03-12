@@ -11,7 +11,7 @@ export type CardProps = {
   onButtonClick: () => void;
 };
 
-export const CardV2 = ({ img, city, productName, description, price, buttonText, onButtonClick }: CardProps) => {
+export const CardV2 = ({ img, city, productName, price, buttonText, onButtonClick }: CardProps) => {
   return (
     <div className={styles.card}>
       <div className={styles.content}>

@@ -10,7 +10,6 @@ const meta = {
     img: canImage,
     city: 'New York',
     productName: 'Lemon',
-    description: 'Available in',
     price: '$2.99',
     buttonText: 'Add to cart',
     onButtonClick: fn(),
