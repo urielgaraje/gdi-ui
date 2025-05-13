@@ -1,0 +1,83 @@
+@font-face {
+    font-family: 'ToyotaType';
+    src: url('assets/fonts/Toyota/ToyotaType-Black.otf') format('opentype');
+    font-weight: 900;
+    font-style: normal;
+}
+  
+@font-face {
+    font-family: 'ToyotaType';
+    src: url('assets/fonts/Toyota/ToyotaType-BlackIt.otf') format('opentype');
+    font-weight: 900;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'ToyotaType';
+    src: url('assets/fonts/Toyota/ToyotaType-Bold.otf') format('opentype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ToyotaType';
+    src: url('assets/fonts/Toyota/ToyotaType-BoldIt.otf') format('opentype');
+    font-weight: 700;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'ToyotaType';
+    src: url('assets/fonts/Toyota/ToyotaType-Semibold.otf') format('opentype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ToyotaType';
+    src: url('assets/fonts/Toyota/ToyotaType-SemiboldIt.otf') format('opentype');
+    font-weight: 600;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'ToyotaType';
+    src: url('assets/fonts/Toyota/ToyotaType-Regular.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ToyotaType';
+    src: url('assets/fonts/Toyota/ToyotaType-RegularIt.otf') format('opentype');
+    font-weight: 400;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'ToyotaType';
+    src: url('assets/fonts/Toyota/ToyotaType-Book.otf') format('opentype');
+    font-weight: 350;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ToyotaType';
+    src: url('assets/fonts/Toyota/ToyotaType-BookIt.otf') format('opentype');
+    font-weight: 350;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'ToyotaType';
+    src: url('assets/fonts/Toyota/ToyotaType-Light.otf') format('opentype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'ToyotaType';
+    src: url('assets/fonts/Toyota/ToyotaType-LightIt.otf') format('opentype');
+    font-weight: 300;
+    font-style: italic;
+}

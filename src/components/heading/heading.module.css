@@ -1,0 +1,201 @@
+.heading {
+  font-family: 'ToyotaType';
+  width: 100%;
+  background-color: #ffffff;
+  color: #15151B;
+}
+
+.heading.light {
+  background-color: #ffffff;
+  color: #15151B;
+}
+
+.heading.dark {
+  background-color: #282830;
+  color: #ffffff;
+}
+
+.content {
+  padding: 2.5rem 1rem;
+  max-width: 21.75rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.eyeblow {
+  font-size: 1.125rem;
+  line-height: 1.5rem;
+  color: #D40605;
+}
+
+.title {
+  font-size: 2.125rem;
+  line-height: 2.375rem;
+  padding-top: 0.5rem;
+  font-weight: 400;
+  margin: 0 auto;
+}
+
+.underline {
+  display: none;
+  width: 2.5rem;
+  height: 0.125rem;
+  background-color: #FF0022;
+}
+
+.details {
+  font-size: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.description {
+  margin: 0;
+  color: #6C7073;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  padding-top: 1.5rem;
+}
+
+.description.light {
+  color: #6C7073;
+}
+
+.description.dark {
+  color: #F5F5F5;
+}
+
+.button {
+  width: 100%;
+  margin-top: 2rem;
+  max-width: -webkit-fill-available;
+  background-color: #282830;
+  color: #ffffff;
+}
+
+.button:hover {
+  background-color: #282830;
+  color: #ffffff;
+}
+
+.button.white {
+  background-color: #282830;
+  color: #ffffff;
+}
+
+.button.dark {
+  background-color: #ffffff;
+  color: #282830;
+}
+
+/* Variant: row */
+.row {
+  flex-direction: column;
+}
+
+.row .eyeblow {
+  display: none;
+}
+
+.row .title {
+  padding-top: 0;
+  font-size: 1.75rem;
+  line-height: 2.25rem;
+}
+
+.row .underline {
+  display: block;
+  margin: 0 auto;
+  margin-top: 1.5rem;
+}
+
+
+@media (min-width: 768px) {
+  .content {
+    padding: 2.5rem 0;
+    max-width: 30.5rem;
+  }
+}
+
+@media (min-width: 1440px) {
+  .content {
+    padding: 5rem 0;
+    max-width: 34.875rem;
+  }
+
+  /* Variant: row */
+  .row {
+    flex-direction: row;
+    max-width: unset;
+    padding: 5rem 9.6875rem;
+    align-items: baseline;
+    justify-content: space-between;
+  }
+
+  .row > div {
+    max-width: 27.375rem;
+  }
+
+  .row .title{
+    text-align: left;
+  }
+
+  .row .underline {
+    margin: unset;
+    margin-top: 2rem;
+  }
+
+  .row .description {
+    padding-top: 0;
+    text-align: left;
+  }
+
+  .row .button {
+    max-width: 7.75rem;
+    margin-top: 1.5rem;
+  }
+} 
+
+@media (min-width: 1920px) {
+  .content {
+    padding: 7.5rem 0;
+    max-width: 44.25rem;
+  }
+
+  /* Variant: row */
+  .row {
+    flex-direction: row;
+    max-width: unset;
+    padding: 7.5rem 15rem;
+    align-items: baseline;
+    justify-content: space-between;
+  }
+
+  .row > div {
+    max-width: 29rem;
+  }
+}
+
+
+
+/* Variant: theme dark */
+@media (prefers-color-scheme: dark) {
+  .heading {
+    background-color: #282830;
+    color: #ffffff;
+  }
+
+  .description {
+    color: #F5F5F5;
+  }
+
+}
+
+
+
+
+

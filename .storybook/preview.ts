@@ -2,6 +2,7 @@ import type { Preview, ReactRenderer } from '@storybook/react';
 import { withThemeByClassName } from '@storybook/addon-themes';
 
 import '../src/main.css';
+import '../src/fonts.css';
 
 const preview: Preview = {
   parameters: {
