@@ -185,8 +185,8 @@
 /* Variant: theme dark */
 @media (prefers-color-scheme: dark) {
   .heading {
-    background-color: #282830;
     color: #ffffff;
+    background-color: #282830;
   }
 
   .description {
